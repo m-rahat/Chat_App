@@ -18,7 +18,7 @@ public class Server {
     	
     	System.out.println("The client IP is: " + clientSocket.getInetAddress());
     	
-    	String msg = "Hamid bhai jindabaad";
+    	String msg = "You are now connected to the server";
     	
     	InputStream input = clientSocket.getInputStream();
     	BufferedReader reader = new BufferedReader(new InputStreamReader(input));
@@ -27,6 +27,14 @@ public class Server {
     	PrintWriter writer = new PrintWriter(output, true);
     	output.write(msg.getBytes());
     	
+    	
+    	Scanner in = new Scanner(System.in);
+    	
+    	while(true) {
+    		String m = reader.readLine();
+    		if (m.equals("bye")) break;
+    		System.out.println("User message: " + m);
+    	}//while
     	
     	serverSocket.close();
     	
