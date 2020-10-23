@@ -32,18 +32,6 @@ public class User implements Runnable{
 	
 	public static void main(String [] args) {
 		
-		System.out.println("Welcome to the world of instant chatting");
-		
-		Scanner in = new Scanner(System.in);
-		
-		while(true) {
-			String msg = in.nextLine();
-			if (msg.equals("bye")) break;
-			System.out.println("User: " + msg);
-		}
-		
-		System.out.println("Program terminated");
-		
 	}//main
 
 }//user
