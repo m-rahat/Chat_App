@@ -14,6 +14,8 @@ public class Server {
     	
     	Socket clientSocket = serverSocket.accept();
     	
+    	System.out.println("Start chatting now");
+    	
     	ReceiverThread rt = new ReceiverThread(clientSocket);
     	SenderThread st = new SenderThread(clientSocket);
     	

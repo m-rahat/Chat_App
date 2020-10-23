@@ -23,6 +23,8 @@ public class Client {
     	if (socket.isConnected()) System.out.println("connection successful");
     	else System.out.println("unsuccessful");
     	
+    	System.out.println("You can type in your chat messages now");
+    	
     	InputStream input = socket.getInputStream();
     	BufferedReader reader = new BufferedReader(new InputStreamReader(input));
     	
