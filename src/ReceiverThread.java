@@ -19,6 +19,8 @@ public class ReceiverThread extends Thread{
     	
     	OutputStream output = socket.getOutputStream();
     	PrintWriter writer = new PrintWriter(output, true);
+    	
+
 		
 		while(true) {
 			String msg = reader.readLine();
